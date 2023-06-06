@@ -17,7 +17,7 @@ function randomNumber() {
   multi.style.display = 'block';
   mul.uptotable = hightable.value;
   mul.rand1 = Math.floor(Math.random() * (mul.uptotable - 1) + 2);
-  mul.rand2 = Math.floor(Math.random() * (mul.uptotable - 1) + 2);
+  mul.rand2 = Math.floor(Math.random() * 8 + 2);
   setMulti();
 }
 
