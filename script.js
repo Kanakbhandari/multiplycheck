@@ -32,6 +32,7 @@ function checkAnswer() {
     playsound('s');
     randomNumber();
     result.value = '';
+    result.focus();
   } else {
     playsound('f');
   }
@@ -42,7 +43,13 @@ function playsound(folder) {
 
   let audio = document.createElement('audio');
   audio.src = `/sounds/${folder}/${sound}.mp3`;
+  audio.addEventListener('load', () => {
+    console.log(audio.duration);
+  });
   audio.play();
+  setTimeout(() => {
+    return;
+  }, 2000);
 }
 
 strtbtn.addEventListener('click', randomNumber);
