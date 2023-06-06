@@ -32,10 +32,10 @@ function checkAnswer() {
     playsound('s');
     randomNumber();
     result.value = '';
-    result.focus();
   } else {
     playsound('f');
   }
+  result.focus();
 }
 
 function playsound(folder) {
